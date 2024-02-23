@@ -5,7 +5,7 @@ import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
 import { Section } from '../../components/Section';
 import { Note } from '../../components/Note';
-import { FiPlus, FiSearch } from 'react-icons/Fi';
+import { FiPlus, FiSearch } from 'react-icons/fi';
 
 export function Home() {
     return (

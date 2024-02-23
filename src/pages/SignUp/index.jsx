@@ -1,5 +1,5 @@
 import { Container, Form, Background } from "./styles";
-import { FiMail, FiLock, FiUser } from "react-icons/Fi";
+import { FiMail, FiLock, FiUser } from "react-icons/fi";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
