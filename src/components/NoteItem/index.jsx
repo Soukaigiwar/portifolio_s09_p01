@@ -1,7 +1,7 @@
 import { Container } from "./styles";
-import { FiPlus, FiX } from "react-icons/Fi";
+import { FiPlus, FiX } from "react-icons/fi";
 
-export function NoteItem({ isNew, value, onClick, ...rest}) {
+export function NoteItem({ isNew, value, onClick, ...rest }) {
     return (
         <Container $isnew={isNew}>
             <input
@@ -14,11 +14,10 @@ export function NoteItem({ isNew, value, onClick, ...rest}) {
             <button
                 type="button"
                 onClick={onClick}
-                className={isNew ? 'button-add' : 'button-delete'}
+                className={isNew ? "button-add" : "button-delete"}
             >
-                {isNew ? <FiPlus /> : <FiX /> }
+                {isNew ? <FiPlus /> : <FiX />}
             </button>
-
         </Container>
-    )
+    );
 }

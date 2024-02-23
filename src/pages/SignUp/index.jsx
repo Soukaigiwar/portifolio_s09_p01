@@ -7,7 +7,7 @@ import { Button } from "../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { api } from '../../services/api';
+import { api } from "../../services/api";
 
 export function SignUp() {
     const [name, setName] = useState("");
@@ -19,22 +19,21 @@ export function SignUp() {
     function handleSignUp() {
         if (!name || !email || !password) {
             return alert("Preencha todos os campos.");
-        };
+        }
 
         api.post("/users", { name, email, password })
             .then(() => {
-                alert('Usuário cadastrado com sucesso!')
+                alert("Usuário cadastrado com sucesso!");
                 navigate("/");
             })
-            .catch(e => {
+            .catch((e) => {
                 if (e.response) {
                     alert(e.response.data.message);
                 } else {
                     alert("Não foi possível cadastrar.");
-                };
+                }
             });
-
-    };
+    }
 
     return (
         <Container>
@@ -47,19 +46,19 @@ export function SignUp() {
                     placeholder="Nome"
                     type="text"
                     icon={FiUser}
-                    onChange={e => setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                 />
                 <Input
                     placeholder="E-mail"
                     type="text"
                     icon={FiMail}
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 <Input
                     placeholder="Senha"
                     type="password"
                     icon={FiLock}
-                    onChange={e => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
 
                 <Button title="Cadastrar" onClick={handleSignUp} />
@@ -67,5 +66,5 @@ export function SignUp() {
                 <Link to="/">Voltar para o login</Link>
             </Form>
         </Container>
-    )
+    );
 }
